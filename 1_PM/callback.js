@@ -2,6 +2,10 @@
 // Write code that first gets a user via a getUser() call, then in the callback,
 // flips a coin and tells the user whether or not their guess was correct
 
+
+
+
+
 const coinToss = (guess, callback) => {
   const result = Math.round(Math.random());
   const didWin = guess === result;
@@ -16,3 +20,14 @@ const getUser = callback => {
   };
   callback(user);
 };
+
+const officialCT = (user) => {
+  coinToss(user.guess, printwinloss);}
+
+function printwinloss (boolinput){
+  if (boolinput === true)
+    console.log("winner yes wins are for winners")
+  else 
+    console.log("loser yes losses are for losers")
+}
+getUser(officialCT);

@@ -3,12 +3,17 @@
 
 const arr = [0, 1, 2, 3, 4];
 
-const triple = () => {
-  // TODO
+const triple = (el) => {y = el * 3;
+  return y
 };
 
 Array.prototype.map = function(fun) {
-  // TODO
+  let result = []
+  for (let el of this) {
+    newel = triple(el)
+    result.push(newel)
+  }
+  return result;
 };
 
 console.log(arr.map(triple));
